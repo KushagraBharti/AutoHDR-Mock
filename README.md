@@ -1,0 +1,2 @@
+# AutoHDR-Mock
+Mimic
