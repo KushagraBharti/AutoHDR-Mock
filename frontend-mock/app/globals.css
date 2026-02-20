@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ── Base ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* ── BRUTALIST THEME ──────────────────────────── */
+[data-theme="brutalist"] {
+  --t-bg: #F3F3EE;
+  --t-fg: #0A0A08;
+  --t-accent: #FFE500;
+  --t-muted: #888880;
+  --t-surface: #EAEAE5;
+  background: var(--t-bg);
+  color: var(--t-fg);
+  cursor: crosshair !important;
+  /* Structural grid overlay */
+  background-image:
+    linear-gradient(rgba(10,10,8,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,10,8,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+}
+[data-theme="brutalist"] *, [data-theme="brutalist"] a, [data-theme="brutalist"] button {
+  cursor: crosshair !important;
+}
+[data-theme="brutalist"] ::selection { background: var(--t-accent); color: var(--t-fg); }
+/* Brutalist scrollbar */
+[data-theme="brutalist"] ::-webkit-scrollbar { width: 3px; }
+[data-theme="brutalist"] ::-webkit-scrollbar-track { background: var(--t-bg); }
+[data-theme="brutalist"] ::-webkit-scrollbar-thumb { background: var(--t-fg); }
+
+/* ── EDITORIAL THEME ──────────────────────────── */
+[data-theme="editorial"] {
+  --t-bg: #F7F4EF;
+  --t-fg: #1C1410;
+  --t-accent: #8B1A1A;
+  --t-accent2: #C4873A;
+  --t-muted: #8A7E72;
+  --t-surface: #EEE9E2;
+  --t-rule: #C8BFB3;
+  background: var(--t-bg);
+  color: var(--t-fg);
+}
+[data-theme="editorial"] ::selection { background: var(--t-accent); color: #F7F4EF; }
+[data-theme="editorial"] ::-webkit-scrollbar { width: 3px; }
+[data-theme="editorial"] ::-webkit-scrollbar-track { background: var(--t-surface); }
+[data-theme="editorial"] ::-webkit-scrollbar-thumb { background: var(--t-rule); }
+
+/* ── NEON NOIR THEME ──────────────────────────── */
+[data-theme="neon-noir"] {
+  --t-bg: #07010F;
+  --t-fg: #F0E6FF;
+  --t-pink: #FF2D78;
+  --t-cyan: #00F0FF;
+  --t-gold: #FFD700;
+  --t-muted: #7B6A9A;
+  --t-surface: #130825;
+  --t-surface2: #1C0A35;
+  --t-glow-pink: 0 0 20px rgba(255,45,120,0.5), 0 0 60px rgba(255,45,120,0.15);
+  --t-glow-cyan: 0 0 20px rgba(0,240,255,0.5), 0 0 60px rgba(0,240,255,0.15);
+  background: var(--t-bg);
+  color: var(--t-fg);
+}
+[data-theme="neon-noir"] ::selection { background: var(--t-pink); color: var(--t-bg); }
+[data-theme="neon-noir"] ::-webkit-scrollbar { width: 3px; }
+[data-theme="neon-noir"] ::-webkit-scrollbar-track { background: var(--t-surface); }
+[data-theme="neon-noir"] ::-webkit-scrollbar-thumb { background: var(--t-pink); }
+
+/* ── Scanlines for neon-noir ──────────────────── */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.12) 0px,
+    rgba(0,0,0,0.12) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+/* ── Shared utilities ──────────────────────────── */
+.text-balance { text-wrap: balance; }

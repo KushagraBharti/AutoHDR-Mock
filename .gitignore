@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+frontend-mock\node_modules
+frontend-mock/node_modules
+frontend-mock/.next
 /.pnp
 .pnp.js
 .yarn/install-state.gz
