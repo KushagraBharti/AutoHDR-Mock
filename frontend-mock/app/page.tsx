@@ -27,6 +27,110 @@ const THEMES = [
     fg: "#F0E6FF",
     accent: "#FF2D78",
   },
+  {
+    slug: "art-deco",
+    name: "ART DECO LUXE",
+    desc: "Poiret One · Gold on Navy · 1920s Geometric Opulence",
+    bg: "#0a0e1a",
+    fg: "#f5f0e8",
+    accent: "#d4a843",
+  },
+  {
+    slug: "aurora",
+    name: "GLASSMORPHISM AURORA",
+    desc: "Sora · Aurora Greens & Violets · Frosted Glass",
+    bg: "#08060f",
+    fg: "#e8eaf0",
+    accent: "#4ade80",
+  },
+  {
+    slug: "noir-cinema",
+    name: "NOIR CINEMA",
+    desc: "Bodoni Moda · Selective Red · Film Noir B&W",
+    bg: "#0a0a0a",
+    fg: "#e5e5e5",
+    accent: "#c41e2a",
+  },
+  {
+    slug: "botanical",
+    name: "ORGANIC BOTANICAL",
+    desc: "Fraunces · Sage & Terracotta · Nature-Inspired",
+    bg: "#1a1a14",
+    fg: "#f0ead6",
+    accent: "#7c956b",
+  },
+  {
+    slug: "memphis",
+    name: "MEMPHIS POSTMODERN",
+    desc: "Bricolage Grotesque · Bold Colors · 80s Geometric Chaos",
+    bg: "#faf8f2",
+    fg: "#1a1a1a",
+    accent: "#ff3366",
+  },
+  {
+    slug: "cyber-hologram",
+    name: "3D CYBER HOLOGRAM",
+    desc: "Three.js Terrain · Holographic UI · CRT Glitches",
+    bg: "#030008",
+    fg: "#00ffcc",
+    accent: "#ff003c",
+  },
+  {
+    slug: "spatial-vision",
+    name: "SPATIAL VISION OS",
+    desc: "WebGL Fluid Core · Frosted Glass · Parallax Cards",
+    bg: "#000000",
+    fg: "#ffffff",
+    accent: "#ffffff",
+  },
+  {
+    slug: "retro-terminal",
+    name: "CRT PHOSPHOR TERMINAL",
+    desc: "VT100 Emulation · Scanlines · Typing Effects",
+    bg: "#051005",
+    fg: "#33ff00",
+    accent: "#33ff00",
+  },
+  {
+    slug: "swiss-kinetic",
+    name: "SWISS KINETIC TYPOGRAPHY",
+    desc: "Inter Tight · Scroll-driven Motion · Massive Scale",
+    bg: "#f0f0f0",
+    fg: "#050505",
+    accent: "#ff3b00",
+  },
+  {
+    slug: "neobrutalism",
+    name: "HARD-EDGE NEOBRUTALISM",
+    desc: "Syne · Flat Colors · 8px Borders · Spring Physics",
+    bg: "#ffc900",
+    fg: "#000000",
+    accent: "#8b5cf6",
+  },
+  {
+    slug: "cyber-glass",
+    name: "CYBER GLASS OS",
+    desc: "Neon Noir + Glassmorphism + 3D Core",
+    bg: "#05020a",
+    fg: "#f0f0f0",
+    accent: "#00f0ff",
+  },
+  {
+    slug: "kinetic-brutalism",
+    name: "KINETIC NEOBRUTALISM",
+    desc: "Swiss Kinetic + Hard-Edge Borders + Spring Physics",
+    bg: "#ff3366",
+    fg: "#000000",
+    accent: "#ffcc00",
+  },
+  {
+    slug: "aurora-hologram",
+    name: "AURORA HOLOGRAM 3D",
+    desc: "Ethereal Glass 3D + Fluid Shaders + Typography",
+    bg: "#020108",
+    fg: "#ffffff",
+    accent: "#b084ff",
+  }
 ]
 
 export default function ThemeIndex() {
@@ -53,7 +157,7 @@ export default function ThemeIndex() {
         </h1>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px", width: "100%", maxWidth: "900px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px", width: "100%", maxWidth: "1200px" }}>
         {THEMES.map((t) => (
           <Link key={t.slug} href={`/${t.slug}`} style={{ textDecoration: "none" }}>
             <div
